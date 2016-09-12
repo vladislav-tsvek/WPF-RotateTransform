@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:WPF_RotateTransform"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid  x:Name="mainLayout">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="121*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="43*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="26*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label" Content="Angle" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,7,0,0" Grid.Column="0"/>
+        <Label x:Name="label1" Content="Center X:" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,7,0,0" Grid.Column="2"/>
+        <Label x:Name="label2" Content="Center Y:" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,7,0,0" Grid.Column="4"/>
+        <TextBox x:Name="textBoxAngle" HorizontalAlignment="Left" Grid.Row="0" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="0,7,0,0" Grid.Column="1"/>
+        <TextBox x:Name="textBoxCenterX" HorizontalAlignment="Left" Grid.Row="0" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="1,7,0,0" Grid.Column="3"/>
+        <TextBox x:Name="textBoxCenterY" HorizontalAlignment="Left" Grid.Row="0" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="0,7,0,0" Grid.Column="5"/>
+        <Button x:Name="button" Content="Rotate" HorizontalAlignment="Left" Grid.Row="0" VerticalAlignment="Top" Width="32" Grid.Column="6" Margin="10,10,0,0" RenderTransformOrigin="0.484,0.325" Click="button_Click"/>
+
+        <Grid Grid.Row="1" Name="WPFWeb" Grid.ColumnSpan="7" />
+
     </Grid>
 </Window>
